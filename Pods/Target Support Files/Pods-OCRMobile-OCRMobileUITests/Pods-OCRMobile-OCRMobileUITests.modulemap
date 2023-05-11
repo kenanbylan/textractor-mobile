@@ -1,0 +1,6 @@
+framework module Pods_OCRMobile_OCRMobileUITests {
+  umbrella header "Pods-OCRMobile-OCRMobileUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

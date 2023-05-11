@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="NJq-3j-6Ag">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="D3C-QN-Mzk" customClass="LoadingViewController" customModule="OCRMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cWk-0b-nbj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wFT-jM-LHR">
+                                <rect key="frame" x="40" y="127.66666666666669" width="313" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="2x6-3k-kdZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="301"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easily convert to text with Textractor!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-Bm-nA8">
+                                        <rect key="frame" x="0.0" y="321" width="313" height="189"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins Medium" pointSize="45"/>
+                                        <color key="textColor" name="text-color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With texttractor, you will soon start using many features, not just texts." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-wU-o0k">
+                                        <rect key="frame" x="0.0" y="530" width="313" height="42"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" name="text-color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKm-vg-H34">
+                                        <rect key="frame" x="0.0" y="592" width="313" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="RGo-ju-hGE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Get Started">
+                                            <fontDescription key="titleFontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="text-color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getStartedButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="9k1-S4-3Tc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6or-8w-IFG">
+                                <rect key="frame" x="295.33333333333331" y="75" width="57.666666666666686" height="36.666666666666657"/>
+                                <color key="tintColor" name="text-color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                    <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins Medium" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="eS4-ws-a19"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eBm-78-l1c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eBm-78-l1c" firstAttribute="trailing" secondItem="6or-8w-IFG" secondAttribute="trailing" constant="40" id="JFL-dn-xcZ"/>
+                            <constraint firstItem="6or-8w-IFG" firstAttribute="top" secondItem="eBm-78-l1c" secondAttribute="top" constant="16" id="cWc-Lw-6vP"/>
+                            <constraint firstItem="eBm-78-l1c" firstAttribute="bottom" secondItem="wFT-jM-LHR" secondAttribute="bottom" constant="43.329999999999998" id="mJM-Fr-9ks"/>
+                            <constraint firstAttribute="trailing" secondItem="wFT-jM-LHR" secondAttribute="trailing" constant="40" id="nid-gp-hsh"/>
+                            <constraint firstItem="wFT-jM-LHR" firstAttribute="leading" secondItem="cWk-0b-nbj" secondAttribute="leading" constant="40" id="qOL-MO-gAP"/>
+                            <constraint firstItem="wFT-jM-LHR" firstAttribute="top" secondItem="6or-8w-IFG" secondAttribute="bottom" constant="16" id="zvs-Ps-WGs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3O-F2-E4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-787" y="-78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding" width="311" height="301"/>
+        <namedColor name="text-color">
+            <color red="0.32199999690055847" green="0.29399999976158142" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

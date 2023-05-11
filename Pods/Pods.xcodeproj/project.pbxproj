@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25323AA34C501F14E6410E92A2854CA0 /* Pods-OCRMobileTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F3E59BCA161902AF0DAFCBF7BCB5EC /* Pods-OCRMobileTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28D9878B01FA649168981A64E5760AE1 /* Pods-OCRMobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B87537841287C1FFEB067C1A86DCDE /* Pods-OCRMobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34917FA6812AA4F0040843CC6BB041DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		821CC479C4849DCAA73069BC96917CC0 /* Pods-OCRMobileTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F81C5E7197B135F0A19CC7BA6F480E /* Pods-OCRMobileTests-dummy.m */; };
+		92276295B766862D20F627868D27959C /* Pods-OCRMobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7858DC2FD893DACE93BCA88D98FC55 /* Pods-OCRMobile-dummy.m */; };
+		BBED8ED1DC8A2808A79AF6ED1DC83BBB /* Pods-OCRMobile-OCRMobileUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 393BA1A6354B07D219EBF70CFA72331B /* Pods-OCRMobile-OCRMobileUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9D95FC12C2E1AD75E84FB1D7DA97DD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EEE7A80139D208FA968C7C8C98FE33AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F5838F62D94B12DFE6134EDFF926225A /* Pods-OCRMobile-OCRMobileUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61231AA68150058F1C9C1108168424DC /* Pods-OCRMobile-OCRMobileUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70EEE26ED4296A202370F4A66BE8FC4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BC6AB7CD5D0D7FBC5EA0C65A738FC45;
+			remoteInfo = "Pods-OCRMobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		054600C9719ED521E8909F8A639E5F83 /* Pods-OCRMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCRMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		0DE7110D1FD0259808EC8E94063D3222 /* Pods-OCRMobile-OCRMobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCRMobile-OCRMobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		18930542973999121A9050FDDD124810 /* Pods-OCRMobile-OCRMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCRMobile-OCRMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AA3DA72F1C043BE1626FD50114A35B6 /* Pods-OCRMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCRMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		1C7858DC2FD893DACE93BCA88D98FC55 /* Pods-OCRMobile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OCRMobile-dummy.m"; sourceTree = "<group>"; };
+		25CEF283485FB1E52E8968CE46341286 /* Pods-OCRMobileTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCRMobileTests-Info.plist"; sourceTree = "<group>"; };
+		296C4631ED88CEE8D30951DA956C77C5 /* Pods-OCRMobileTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCRMobileTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		37B87537841287C1FFEB067C1A86DCDE /* Pods-OCRMobile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OCRMobile-umbrella.h"; sourceTree = "<group>"; };
+		393BA1A6354B07D219EBF70CFA72331B /* Pods-OCRMobile-OCRMobileUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OCRMobile-OCRMobileUITests-umbrella.h"; sourceTree = "<group>"; };
+		4216E8C9B20129493C9B123C01BDEBF4 /* Pods-OCRMobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OCRMobile.modulemap"; sourceTree = "<group>"; };
+		43E058B96028FD02ACDE48E9FBEB904C /* Pods-OCRMobileTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCRMobileTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		61231AA68150058F1C9C1108168424DC /* Pods-OCRMobile-OCRMobileUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OCRMobile-OCRMobileUITests-dummy.m"; sourceTree = "<group>"; };
+		6299EBA6DA1DE0FBDB01C8B42B300602 /* Pods-OCRMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCRMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65F81C5E7197B135F0A19CC7BA6F480E /* Pods-OCRMobileTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OCRMobileTests-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		85D9650F935C6C8AFFE06B245A1BF1A5 /* Pods-OCRMobile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCRMobile-Info.plist"; sourceTree = "<group>"; };
+		941559CF9C82E5F04ABF31E91BE91497 /* Pods-OCRMobile-OCRMobileUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OCRMobile-OCRMobileUITests.modulemap"; sourceTree = "<group>"; };
+		95705890D7486DB01B29D9D63DC76D51 /* Pods-OCRMobileTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OCRMobileTests"; path = Pods_OCRMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A79EDE7AE844CF14564D3BB3646331C /* Pods-OCRMobileTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OCRMobileTests.modulemap"; sourceTree = "<group>"; };
+		9BBAC3BAC1254EF7295A3429137565C8 /* Pods-OCRMobile-OCRMobileUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OCRMobile-OCRMobileUITests"; path = Pods_OCRMobile_OCRMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B307EC3E3BB5969B5BDCFBC2B7CA233D /* Pods-OCRMobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCRMobile-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5FD37574F356B158B041555FC51E655 /* Pods-OCRMobile-OCRMobileUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCRMobile-OCRMobileUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B9A8CB1FCDBBA518B02600C54137A022 /* Pods-OCRMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCRMobile.release.xcconfig"; sourceTree = "<group>"; };
+		C68E42CD993BE13B676C35DC68FE8FBD /* Pods-OCRMobile-OCRMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OCRMobile-OCRMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C923D2930D80F3DD071B2AE531FE6D3A /* Pods-OCRMobile-OCRMobileUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OCRMobile-OCRMobileUITests-Info.plist"; sourceTree = "<group>"; };
+		C9F3E59BCA161902AF0DAFCBF7BCB5EC /* Pods-OCRMobileTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OCRMobileTests-umbrella.h"; sourceTree = "<group>"; };
+		E1F6EFF3EE20286997FD3073CBE629AC /* Pods-OCRMobile */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OCRMobile"; path = Pods_OCRMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFDA33DD6AE0845E786639B42C745BF /* Pods-OCRMobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OCRMobile-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9105797C51A34D37FCAEB8E05BF58894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34917FA6812AA4F0040843CC6BB041DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D064234802786C8F48E5CBC587930EC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE7A80139D208FA968C7C8C98FE33AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70A0707DC1CFB027209D1F3F53923E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D95FC12C2E1AD75E84FB1D7DA97DD5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42DD92E22A9C54D6D7E55E675513D94F /* Pods-OCRMobile */ = {
+			isa = PBXGroup;
+			children = (
+				4216E8C9B20129493C9B123C01BDEBF4 /* Pods-OCRMobile.modulemap */,
+				FDFDA33DD6AE0845E786639B42C745BF /* Pods-OCRMobile-acknowledgements.markdown */,
+				B307EC3E3BB5969B5BDCFBC2B7CA233D /* Pods-OCRMobile-acknowledgements.plist */,
+				1C7858DC2FD893DACE93BCA88D98FC55 /* Pods-OCRMobile-dummy.m */,
+				85D9650F935C6C8AFFE06B245A1BF1A5 /* Pods-OCRMobile-Info.plist */,
+				37B87537841287C1FFEB067C1A86DCDE /* Pods-OCRMobile-umbrella.h */,
+				1AA3DA72F1C043BE1626FD50114A35B6 /* Pods-OCRMobile.debug.xcconfig */,
+				B9A8CB1FCDBBA518B02600C54137A022 /* Pods-OCRMobile.release.xcconfig */,
+			);
+			name = "Pods-OCRMobile";
+			path = "Target Support Files/Pods-OCRMobile";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		620456648710170FB2C0B19CAFAEED5E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42DD92E22A9C54D6D7E55E675513D94F /* Pods-OCRMobile */,
+				83F14CD039803A10F647402DBEE2A0B9 /* Pods-OCRMobile-OCRMobileUITests */,
+				ED727D4F61FE5C18EA070DE1F09139C0 /* Pods-OCRMobileTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		79A0999B5A1000D7F707DAE4BB17B9DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1F6EFF3EE20286997FD3073CBE629AC /* Pods-OCRMobile */,
+				9BBAC3BAC1254EF7295A3429137565C8 /* Pods-OCRMobile-OCRMobileUITests */,
+				95705890D7486DB01B29D9D63DC76D51 /* Pods-OCRMobileTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83F14CD039803A10F647402DBEE2A0B9 /* Pods-OCRMobile-OCRMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				941559CF9C82E5F04ABF31E91BE91497 /* Pods-OCRMobile-OCRMobileUITests.modulemap */,
+				0DE7110D1FD0259808EC8E94063D3222 /* Pods-OCRMobile-OCRMobileUITests-acknowledgements.markdown */,
+				B5FD37574F356B158B041555FC51E655 /* Pods-OCRMobile-OCRMobileUITests-acknowledgements.plist */,
+				61231AA68150058F1C9C1108168424DC /* Pods-OCRMobile-OCRMobileUITests-dummy.m */,
+				C923D2930D80F3DD071B2AE531FE6D3A /* Pods-OCRMobile-OCRMobileUITests-Info.plist */,
+				393BA1A6354B07D219EBF70CFA72331B /* Pods-OCRMobile-OCRMobileUITests-umbrella.h */,
+				18930542973999121A9050FDDD124810 /* Pods-OCRMobile-OCRMobileUITests.debug.xcconfig */,
+				C68E42CD993BE13B676C35DC68FE8FBD /* Pods-OCRMobile-OCRMobileUITests.release.xcconfig */,
+			);
+			name = "Pods-OCRMobile-OCRMobileUITests";
+			path = "Target Support Files/Pods-OCRMobile-OCRMobileUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				79A0999B5A1000D7F707DAE4BB17B9DC /* Products */,
+				620456648710170FB2C0B19CAFAEED5E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED727D4F61FE5C18EA070DE1F09139C0 /* Pods-OCRMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A79EDE7AE844CF14564D3BB3646331C /* Pods-OCRMobileTests.modulemap */,
+				296C4631ED88CEE8D30951DA956C77C5 /* Pods-OCRMobileTests-acknowledgements.markdown */,
+				43E058B96028FD02ACDE48E9FBEB904C /* Pods-OCRMobileTests-acknowledgements.plist */,
+				65F81C5E7197B135F0A19CC7BA6F480E /* Pods-OCRMobileTests-dummy.m */,
+				25CEF283485FB1E52E8968CE46341286 /* Pods-OCRMobileTests-Info.plist */,
+				C9F3E59BCA161902AF0DAFCBF7BCB5EC /* Pods-OCRMobileTests-umbrella.h */,
+				6299EBA6DA1DE0FBDB01C8B42B300602 /* Pods-OCRMobileTests.debug.xcconfig */,
+				054600C9719ED521E8909F8A639E5F83 /* Pods-OCRMobileTests.release.xcconfig */,
+			);
+			name = "Pods-OCRMobileTests";
+			path = "Target Support Files/Pods-OCRMobileTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		275C457CD61ECD19B293673650653BE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D9878B01FA649168981A64E5760AE1 /* Pods-OCRMobile-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58F5F2FD43774F9CC1FF3B3F8041D99A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25323AA34C501F14E6410E92A2854CA0 /* Pods-OCRMobileTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A711FFD36314748A3C147F150B11E169 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBED8ED1DC8A2808A79AF6ED1DC83BBB /* Pods-OCRMobile-OCRMobileUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		33DA0867E551F5BA8F9147B1B3472D10 /* Pods-OCRMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D05B3DD9E4BE297ED42C80603B18D99E /* Build configuration list for PBXNativeTarget "Pods-OCRMobileTests" */;
+			buildPhases = (
+				58F5F2FD43774F9CC1FF3B3F8041D99A /* Headers */,
+				ECBC3D2F5586484CD808276B76AA50D7 /* Sources */,
+				D064234802786C8F48E5CBC587930EC5 /* Frameworks */,
+				C8908E5A1167B0D3DF35D0FD1BA6F557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A096EB42F721DB084FA55B77BEC14AAD /* PBXTargetDependency */,
+			);
+			name = "Pods-OCRMobileTests";
+			productName = Pods_OCRMobileTests;
+			productReference = 95705890D7486DB01B29D9D63DC76D51 /* Pods-OCRMobileTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		8BC6AB7CD5D0D7FBC5EA0C65A738FC45 /* Pods-OCRMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDDDDDD7655A75EB0D921E7DF258AFE4 /* Build configuration list for PBXNativeTarget "Pods-OCRMobile" */;
+			buildPhases = (
+				275C457CD61ECD19B293673650653BE0 /* Headers */,
+				31E7DA07DE48A5277F3BDB59E9EBC5A8 /* Sources */,
+				F70A0707DC1CFB027209D1F3F53923E6 /* Frameworks */,
+				B7224AF5D8616C3D1F19B856A9F3F159 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-OCRMobile";
+			productName = Pods_OCRMobile;
+			productReference = E1F6EFF3EE20286997FD3073CBE629AC /* Pods-OCRMobile */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA65BD302C5DE04DDDC58B5EF967560E /* Pods-OCRMobile-OCRMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB32F37AE1BD798A8E26B32D3732DCA /* Build configuration list for PBXNativeTarget "Pods-OCRMobile-OCRMobileUITests" */;
+			buildPhases = (
+				A711FFD36314748A3C147F150B11E169 /* Headers */,
+				9EFA678A0B9FC27DBC8712F7E937D601 /* Sources */,
+				9105797C51A34D37FCAEB8E05BF58894 /* Frameworks */,
+				5876EE20140F35B3D7D0596B64EFE7A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-OCRMobile-OCRMobileUITests";
+			productName = Pods_OCRMobile_OCRMobileUITests;
+			productReference = 9BBAC3BAC1254EF7295A3429137565C8 /* Pods-OCRMobile-OCRMobileUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 79A0999B5A1000D7F707DAE4BB17B9DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BC6AB7CD5D0D7FBC5EA0C65A738FC45 /* Pods-OCRMobile */,
+				FA65BD302C5DE04DDDC58B5EF967560E /* Pods-OCRMobile-OCRMobileUITests */,
+				33DA0867E551F5BA8F9147B1B3472D10 /* Pods-OCRMobileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5876EE20140F35B3D7D0596B64EFE7A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7224AF5D8616C3D1F19B856A9F3F159 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8908E5A1167B0D3DF35D0FD1BA6F557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31E7DA07DE48A5277F3BDB59E9EBC5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92276295B766862D20F627868D27959C /* Pods-OCRMobile-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFA678A0B9FC27DBC8712F7E937D601 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5838F62D94B12DFE6134EDFF926225A /* Pods-OCRMobile-OCRMobileUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBC3D2F5586484CD808276B76AA50D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CC479C4849DCAA73069BC96917CC0 /* Pods-OCRMobileTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A096EB42F721DB084FA55B77BEC14AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OCRMobile";
+			target = 8BC6AB7CD5D0D7FBC5EA0C65A738FC45 /* Pods-OCRMobile */;
+			targetProxy = 70EEE26ED4296A202370F4A66BE8FC4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18AD77BBA0E2F6B95F5A6F1E2D51EE47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054600C9719ED521E8909F8A639E5F83 /* Pods-OCRMobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCRMobileTests/Pods-OCRMobileTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCRMobileTests/Pods-OCRMobileTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		326F84448EE1A8A8F2AED8839AFCA4A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18930542973999121A9050FDDD124810 /* Pods-OCRMobile-OCRMobileUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCRMobile-OCRMobileUITests/Pods-OCRMobile-OCRMobileUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCRMobile-OCRMobileUITests/Pods-OCRMobile-OCRMobileUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3450AF3C876E9F1CE877FC3426617053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9A8CB1FCDBBA518B02600C54137A022 /* Pods-OCRMobile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCRMobile/Pods-OCRMobile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCRMobile/Pods-OCRMobile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		603158BB1E65A08A57D994317B31E87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6299EBA6DA1DE0FBDB01C8B42B300602 /* Pods-OCRMobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCRMobileTests/Pods-OCRMobileTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCRMobileTests/Pods-OCRMobileTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		791D8D9723DF7B8C75E53D054B566D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AA3DA72F1C043BE1626FD50114A35B6 /* Pods-OCRMobile.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCRMobile/Pods-OCRMobile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCRMobile/Pods-OCRMobile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C3FBC45C4966EFE20583918767EFBE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		834DB0149B9BC8FF0A96478DB2EDEB3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C68E42CD993BE13B676C35DC68FE8FBD /* Pods-OCRMobile-OCRMobileUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OCRMobile-OCRMobileUITests/Pods-OCRMobile-OCRMobileUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OCRMobile-OCRMobileUITests/Pods-OCRMobile-OCRMobileUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FF0A36149038A192FFD678E1D4A40D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C3FBC45C4966EFE20583918767EFBE2 /* Debug */,
+				FF0A36149038A192FFD678E1D4A40D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDDDDDD7655A75EB0D921E7DF258AFE4 /* Build configuration list for PBXNativeTarget "Pods-OCRMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				791D8D9723DF7B8C75E53D054B566D1B /* Debug */,
+				3450AF3C876E9F1CE877FC3426617053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D05B3DD9E4BE297ED42C80603B18D99E /* Build configuration list for PBXNativeTarget "Pods-OCRMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603158BB1E65A08A57D994317B31E87B /* Debug */,
+				18AD77BBA0E2F6B95F5A6F1E2D51EE47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB32F37AE1BD798A8E26B32D3732DCA /* Build configuration list for PBXNativeTarget "Pods-OCRMobile-OCRMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				326F84448EE1A8A8F2AED8839AFCA4A2 /* Debug */,
+				834DB0149B9BC8FF0A96478DB2EDEB3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
