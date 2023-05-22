@@ -6,6 +6,8 @@ import Foundation
 import UIKit
 
 class MainCoordinator: Coordinator {
+    
+    
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -15,6 +17,7 @@ class MainCoordinator: Coordinator {
     func start() {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(MainTabbarController.self)")
         navigationController.show(controller, sender: nil)
+        
     }
 }
 

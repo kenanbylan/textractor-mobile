@@ -1,8 +1,8 @@
 //
-//  MainTabbarControllerViewController.swift
+//  MainTabbarController.swift
 //  OCRMobile
 //
-//  Created by Kenan Baylan on 11.05.2023.
+//  Created by Kenan Baylan on 12.05.2023.
 //
 
 import UIKit

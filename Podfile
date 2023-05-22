@@ -6,7 +6,11 @@ target 'OCRMobile' do
   use_frameworks!
 
   # Pods for OCRMobile
-
+  pod "Kingfisher"
+  pod 'Alamofire'
+  pod "IQKeyboardManagerSwift"
+  pod 'ProgressHUD'
+  pod 'lottie-ios'
 
   target 'OCRMobileTests' do
     inherit! :search_paths

@@ -12,37 +12,32 @@ enum HTTPMethods: String {
 
 
 enum NetworkError: Error {
-    
     case invalidURL
     case invalidResponse
     case invalidData
     case parseError
     case unknownError(Error)
-    case apiError(APIError)
+    case apiError(ErrorTypes)
 }
 
-struct APIError: Decodable, Error {
-    
-    
-    let statusCode: Int?
-    let reason: String?
-    let message: String?
+
+enum ErrorTypes: String, Error {
+    case invalidData = "Invalid data"
+    case invalidURL = "Invalid url"
+    case generalError = "An error happened"
 }
+
+
 
 class NetworkHelper {
     
     static let shared = NetworkHelper()
+    private let baseURL = "https://textractor.marun.tk/api/"
     
-    private let baseURL = "http://localhost:3000/api"
-    
-    
-    
+    //https://textractor.marun.tk/api/get-languages
     
     func requestURL(endPoint: String) -> String {
         baseURL + endPoint
-        
-      
-        
     }
     
     

@@ -55,7 +55,7 @@
                                             <color key="baseBackgroundColor" name="text-color"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="getStartedButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="9k1-S4-3Tc"/>
+                                            <action selector="getStartedButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="Gql-vk-Ug4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -68,7 +68,7 @@
                                     <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins Medium" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="skipButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="eS4-ws-a19"/>
+                                    <action selector="skipButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="7VA-ko-ruw"/>
                                 </connections>
                             </button>
                         </subviews>

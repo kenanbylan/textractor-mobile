@@ -14,6 +14,7 @@ class LoadingViewModel {
     
     func nextLogin() {
         coordinator?.showHome()
+        
     }
      
     

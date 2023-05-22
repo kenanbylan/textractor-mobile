@@ -17,22 +17,28 @@ class LoadingCoordinator: Coordinator {
     }
     
     func start() {
+        
         let controller = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "\(LoadingViewController.self)")
         navigationController.show(controller, sender: nil)
+        
     }
     
+    
+    
+    func showHome() {
+        let controller = MainTabbarController.instantiate(name: .main)
+        navigationController.setViewControllers([controller], animated: true)
+        print("çalışıyor")
+        //navigationController.show(controller, sender: nil)
+        
+    }
     
     
     func presentAlert(_ alertController: UIAlertController, animated: Bool, completion: (() -> Void)?) {
         navigationController.present(alertController, animated: animated, completion: completion)
     }
     
-    func showHome() {
-        let controller = MainTabbarController.instantiate(name: .main)
-      //  navigationController.setViewControllers([controller], animated: true)
-        navigationController.show(controller, sender: nil)
-    }
-    
+
     
     
 }
