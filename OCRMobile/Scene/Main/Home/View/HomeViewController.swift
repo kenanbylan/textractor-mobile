@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController  {
     
     
     let viewModel = HomeViewModel()
+    let context = AppDelegate()
     
     //MARK: UIElements
     @IBOutlet weak var imageView: UIImageView!
@@ -34,10 +36,6 @@ class HomeViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let navigationBar = UINavigationBarAppearance()
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .bold)]
-        navigationController?.navigationBar.standardAppearance = navigationBar
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBar
         
         
         //MARK: GET Request
@@ -105,13 +103,41 @@ class HomeViewController: UIViewController  {
     
     
     @IBAction func scanButtonTapped(_ sender: Any) {
-       
-        guard let selectedType = selectedType,
-                 let selectedImage = selectedImage,
-                 let selectedLanguage = selectedLanguage
-                else { return }
         
+        
+        self.viewModel.postImagetoText(imageUrl: self.imageUrlString!, lang: self.selectedLangCode!) { [weak self] in
+            DispatchQueue.main.async {
+                self?.textView.text = self?.viewModel.textViewData
+                //print("View Controller textViewData: ", self?.viewModel.textViewData)
+                
+                
+                //MARK: CoreData Insert Operation
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+                let context = appDelegate.persistentContainer.viewContext
+                
+                
+                
+                guard let entity = NSEntityDescription.entity(forEntityName: "Recent", in: context) else {
+                    fatalError("Failed to retrieve enetity description.")
+                    return  }
+
+                
+                let recentObject = NSManagedObject(entity: entity, insertInto: context)
+                
+                recentObject.setValue(self!.viewModel.textViewData, forKey: "text")
+                recentObject.setValue(self!.selectedLanguage, forKey: "language")
+                recentObject.setValue(UUID(), forKey: "id")
+                
+                do {
+                    try context.save()
+                    print("Success") //will add alert
+                } catch {
+                    print("error:",error.localizedDescription)
+                }
+            }
+        }
     }
+    
     
 }
 
@@ -122,23 +148,20 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         guard let selectImage = info[.originalImage] as? UIImage else { return }
-        
         self.imageView.image = selectImage
+        
+        
         selectedImage = selectImage //Photo is assigned to the variable.
         
-        guard let imageData = selectImage.pngData() else { return  }
-        
+        guard let imageData = selectImage.pngData() else { return }
         let base64String = imageData.base64EncodedString(options: [])
 
-        print("base64Image : ", base64String)
-        self.imageUrlString = "data:image/png;base64,\(base64String)"
-        
-        print("imageUrlString:",imageUrlString)
         
         
+        imageUrlString = "data:image/png;base64,\(base64String)"
         picker.dismiss(animated: true, completion: nil)
+        
     }
-    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)

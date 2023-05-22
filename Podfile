@@ -12,6 +12,7 @@ target 'OCRMobile' do
   pod 'ProgressHUD'
   pod 'lottie-ios'
 
+  
   target 'OCRMobileTests' do
     inherit! :search_paths
     # Pods for testing

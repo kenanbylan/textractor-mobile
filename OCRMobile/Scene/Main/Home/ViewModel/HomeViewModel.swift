@@ -37,28 +37,30 @@ class HomeViewModel {
         self.successCallback?()
     }
     
-    func postImagetoText(imageUrl: URL, lang: String) {
-        
+    func postImagetoText(imageUrl: String, lang: String, completion: @escaping () -> Void) {
         ProgressHUD.animationType = .multipleCircleScaleRipple
         ProgressHUD.colorAnimation = UIColor(named: "text-color")!
         ProgressHUD.show("Image Scanner.")
         
         manager.postRecognize(imageUrl: imageUrl, lang: lang) { [weak self] recognize, error in
-            
             if let error = error {
                 ProgressHUD.showFailed()
-                print("error: ",error)
-                self!.errorCallback?(error.localizedDescription)
+                print("error: ", error)
+                self?.errorCallback?(error.localizedDescription)
             }
             
             if let recognize = recognize {
                 ProgressHUD.showSucceed()
-                self!.textViewData = recognize.data
-                print("View Model textViewData: ",self!.textViewData)
+                self?.textViewData = recognize.data
+                print("View Model textViewData: ", self?.textViewData)
             } else {
                 ProgressHUD.showFailed()
             }
+            
+            completion() // Call the completion closure after the operation is finished
         }
     }
+
     
 }
+ 

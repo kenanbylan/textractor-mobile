@@ -18,7 +18,9 @@ class BorderImageView: UIImageView {
     }
     
     private func setupBorder() {
-      
+        self.layer.cornerRadius = 12
+        self.layer.borderWidth = 2.0
+        self.layer.borderColor = UIColor(named: "text-color")?.cgColor
         
     }
 }

@@ -20,7 +20,6 @@ struct Languages: Codable {
         case code = "lang_code"
         case language
         case version = "__v"
-
     }
     
     

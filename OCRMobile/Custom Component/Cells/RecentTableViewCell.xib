@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="192" id="KGk-i7-Jjw" customClass="RecentTableViewCell" customModule="OCRMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="192"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xim-nE-VVy" customClass="CardView" customModule="OCRMobile" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="192"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-62-1h8">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="192"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwA-91-OCd">
+                                        <rect key="frame" x="10" y="10" width="336" height="106"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore</string>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a6n-Yt-Il1">
+                                        <rect key="frame" x="20" y="136" width="176" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turkish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o7-aF-Xma">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iti-g0-NjB">
+                                                <rect key="frame" x="98" y="0.0" width="78" height="36"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Copy Text">
+                                                    <color key="titleColor" name="text-color"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="copyButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="o1E-Ig-B6N"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bwA-91-OCd" firstAttribute="leading" secondItem="Slx-62-1h8" secondAttribute="leading" constant="10" id="JWd-wK-IAc"/>
+                                    <constraint firstItem="bwA-91-OCd" firstAttribute="top" secondItem="Slx-62-1h8" secondAttribute="top" constant="10" id="RIp-80-ag5"/>
+                                    <constraint firstAttribute="trailing" secondItem="bwA-91-OCd" secondAttribute="trailing" constant="10" id="bPN-ad-eJT"/>
+                                    <constraint firstItem="a6n-Yt-Il1" firstAttribute="leading" secondItem="Slx-62-1h8" secondAttribute="leading" constant="20" id="fLt-I3-YSx"/>
+                                    <constraint firstItem="a6n-Yt-Il1" firstAttribute="top" secondItem="bwA-91-OCd" secondAttribute="bottom" constant="20" id="uRm-tQ-DPY"/>
+                                    <constraint firstAttribute="bottom" secondItem="a6n-Yt-Il1" secondAttribute="bottom" constant="20" id="wvi-FU-FzW"/>
+                                    <constraint firstAttribute="trailing" secondItem="a6n-Yt-Il1" secondAttribute="trailing" constant="20" id="yQM-1L-Q0X"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Slx-62-1h8" secondAttribute="trailing" id="0RG-BR-iKT"/>
+                            <constraint firstItem="Slx-62-1h8" firstAttribute="leading" secondItem="xim-nE-VVy" secondAttribute="leading" id="YIz-cT-WVw"/>
+                            <constraint firstItem="Slx-62-1h8" firstAttribute="top" secondItem="xim-nE-VVy" secondAttribute="top" id="hph-dy-Owk"/>
+                            <constraint firstAttribute="bottom" secondItem="Slx-62-1h8" secondAttribute="bottom" id="u8y-8T-Akd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xim-nE-VVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZCn-JR-k5a"/>
+                    <constraint firstItem="xim-nE-VVy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tWx-vr-USs"/>
+                    <constraint firstAttribute="trailing" secondItem="xim-nE-VVy" secondAttribute="trailing" id="v3X-7Y-NFJ"/>
+                    <constraint firstAttribute="bottom" secondItem="xim-nE-VVy" secondAttribute="bottom" id="yuJ-TD-F3e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="copyButton" destination="Iti-g0-NjB" id="Poi-XI-lXd"/>
+                <outlet property="languageLabel" destination="5o7-aF-Xma" id="XqJ-S9-0dI"/>
+                <outlet property="resultText" destination="bwA-91-OCd" id="zvG-Fc-Sd9"/>
+            </connections>
+            <point key="canvasLocation" x="178.62595419847327" y="61.267605633802823"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="text-color">
+            <color red="0.32156862745098036" green="0.29411764705882354" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

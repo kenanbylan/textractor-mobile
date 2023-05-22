@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeManagerProtocol {
     func getLanguages(complete: @escaping(([Languages]?, Error?)->()))
-    func postRecognize(imageUrl: URL, lang: String, complete: @escaping((Recognize?, Error?)->()) )
+    func postRecognize(imageUrl: String, lang: String, complete: @escaping((Recognize?, Error?)->()) )
     
 }
 
@@ -31,7 +31,7 @@ class HomeManager: HomeManagerProtocol {
     }
     
     
-    func postRecognize(imageUrl: URL, lang: String, complete: @escaping ((Recognize?, Error?) -> ())) {
+    func postRecognize(imageUrl: String, lang: String, complete: @escaping ((Recognize?, Error?) -> ())) {
         let url = HomeEnpoint.postRecognize.path
         
         let parameters: [String: Any] = ["imageUrl": imageUrl, "language":lang]
