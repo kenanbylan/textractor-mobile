@@ -15,27 +15,10 @@
                     <view key="view" contentMode="scaleToFill" id="YrB-Dw-6wx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZZ-ZK-8eq" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="212" width="393" height="557"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lottie"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Gke-eV-tfJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="iZZ-ZK-8eq" firstAttribute="bottom" secondItem="Gke-eV-tfJ" secondAttribute="bottom" id="KPy-TK-86u"/>
-                            <constraint firstItem="Gke-eV-tfJ" firstAttribute="trailing" secondItem="iZZ-ZK-8eq" secondAttribute="trailing" id="lae-IX-OK9"/>
-                            <constraint firstItem="iZZ-ZK-8eq" firstAttribute="leading" secondItem="Gke-eV-tfJ" secondAttribute="leading" id="qde-e2-IHj"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="person.fill" catalog="system" id="aUo-ua-EGO"/>
-                    <connections>
-                        <outlet property="lottieView" destination="iZZ-ZK-8eq" id="P6A-i0-p3N"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIZ-2x-RhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
