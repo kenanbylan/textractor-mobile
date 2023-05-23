@@ -11,8 +11,16 @@ class LoadingViewController: UIViewController, Storyboarded {
     
     let viewModel = LoadingViewModel()
     
+    static let identifier = String(describing: LoadingViewController.self)
+
+    private let defaults = UserDefaults.standard
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
+        
         configureViewModel()
     }
     
@@ -20,13 +28,11 @@ class LoadingViewController: UIViewController, Storyboarded {
     func configureViewModel(){
         viewModel.coordinator = LoadingCoordinator(navigationController: navigationController ?? UINavigationController())
     }
-
-    @IBAction func skipButtonTapped(_ sender: Any) {
-        print("skip button tapped")
-    }
+    
     
     @IBAction func getStartedButtonTapped(_ sender: Any) {
         viewModel.nextLogin()
     }
+    
     
 }

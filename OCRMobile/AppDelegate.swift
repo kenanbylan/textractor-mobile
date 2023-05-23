@@ -11,8 +11,32 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let hasOpenedBefore = UserDefaults.standard.bool(forKey: "hasOpenedBefore")
+        
+        if hasOpenedBefore {
+            // Show loading page
+            UserDefaults.standard.set(true, forKey: "hasOpenedBefore")
+            
+            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+            let loadingViewIdentifier = LoadingViewController.identifier
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: loadingViewIdentifier)
+            
+            window?.rootViewController = initialViewController
+            
+        } else {
+            
+            // Example: Set your initial view controller as the root view controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainTabbarController")
+            window?.rootViewController = initialViewController
+        }
         
         
         return true
@@ -66,6 +90,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
     }
-                        
+    
 }
-                        
+

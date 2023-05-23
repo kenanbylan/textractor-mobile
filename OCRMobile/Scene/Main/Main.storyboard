@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZZ-ZK-8eq" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZZ-ZK-8eq" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="212" width="393" height="557"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lottie"/>
@@ -27,7 +27,6 @@
                         <viewLayoutGuide key="safeArea" id="Gke-eV-tfJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iZZ-ZK-8eq" firstAttribute="top" secondItem="Gke-eV-tfJ" secondAttribute="top" id="7Ml-d8-qpU"/>
                             <constraint firstItem="iZZ-ZK-8eq" firstAttribute="bottom" secondItem="Gke-eV-tfJ" secondAttribute="bottom" id="KPy-TK-86u"/>
                             <constraint firstItem="Gke-eV-tfJ" firstAttribute="trailing" secondItem="iZZ-ZK-8eq" secondAttribute="trailing" id="lae-IX-OK9"/>
                             <constraint firstItem="iZZ-ZK-8eq" firstAttribute="leading" secondItem="Gke-eV-tfJ" secondAttribute="leading" id="qde-e2-IHj"/>
@@ -75,7 +74,7 @@
                         <constraints>
                             <constraint firstItem="40u-K6-Cex" firstAttribute="top" secondItem="PhO-HO-fyP" secondAttribute="top" id="39G-9c-jdp"/>
                             <constraint firstItem="40u-K6-Cex" firstAttribute="bottom" secondItem="PhO-HO-fyP" secondAttribute="bottom" id="b4N-3g-dpw"/>
-                            <constraint firstAttribute="trailing" secondItem="40u-K6-Cex" secondAttribute="trailing" id="r2v-Hj-7LY"/>
+                            <constraint firstItem="PhO-HO-fyP" firstAttribute="trailing" secondItem="40u-K6-Cex" secondAttribute="trailing" id="r2v-Hj-7LY"/>
                             <constraint firstItem="40u-K6-Cex" firstAttribute="leading" secondItem="PhO-HO-fyP" secondAttribute="leading" id="vL7-4M-vMc"/>
                         </constraints>
                     </view>

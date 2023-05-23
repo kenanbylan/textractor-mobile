@@ -201,7 +201,8 @@
 		6E0350292A0D74CC00ECAD22 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				6EC6BC722A1BAF5C00021FA7 /* SettingsViewController.swift */,
+				6EC6BC972A1CE1DB00021FA7 /* ViewModel */,
+				6EC6BC962A1CE1D300021FA7 /* View */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -440,6 +441,21 @@
 			isa = PBXGroup;
 			children = (
 				6EC6BC8A2A1BF82C00021FA7 /* HistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6EC6BC962A1CE1D300021FA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EC6BC722A1BAF5C00021FA7 /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6EC6BC972A1CE1DB00021FA7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

@@ -15,10 +15,9 @@ class RecentTableViewCell: UITableViewCell {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var copyButton: UIButton!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

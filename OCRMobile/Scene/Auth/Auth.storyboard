@@ -60,27 +60,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6or-8w-IFG">
-                                <rect key="frame" x="295.33333333333331" y="75" width="57.666666666666686" height="36.666666666666657"/>
-                                <color key="tintColor" name="text-color"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip">
-                                    <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins Medium" pointSize="16"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="skipButtonTapped:" destination="D3C-QN-Mzk" eventType="touchUpInside" id="7VA-ko-ruw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBm-78-l1c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eBm-78-l1c" firstAttribute="trailing" secondItem="6or-8w-IFG" secondAttribute="trailing" constant="40" id="JFL-dn-xcZ"/>
-                            <constraint firstItem="6or-8w-IFG" firstAttribute="top" secondItem="eBm-78-l1c" secondAttribute="top" constant="16" id="cWc-Lw-6vP"/>
                             <constraint firstItem="eBm-78-l1c" firstAttribute="bottom" secondItem="wFT-jM-LHR" secondAttribute="bottom" constant="43.329999999999998" id="mJM-Fr-9ks"/>
                             <constraint firstAttribute="trailing" secondItem="wFT-jM-LHR" secondAttribute="trailing" constant="40" id="nid-gp-hsh"/>
                             <constraint firstItem="wFT-jM-LHR" firstAttribute="leading" secondItem="cWk-0b-nbj" secondAttribute="leading" constant="40" id="qOL-MO-gAP"/>
-                            <constraint firstItem="wFT-jM-LHR" firstAttribute="top" secondItem="6or-8w-IFG" secondAttribute="bottom" constant="16" id="zvs-Ps-WGs"/>
                         </constraints>
                     </view>
                 </viewController>
