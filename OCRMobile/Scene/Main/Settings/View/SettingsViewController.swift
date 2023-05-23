@@ -35,6 +35,8 @@ class SettingsViewController: UIViewController {
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        bannerView.backgroundColor = .gray
         view.addSubview(bannerView)
         view.addConstraints(
           [NSLayoutConstraint(item: bannerView,

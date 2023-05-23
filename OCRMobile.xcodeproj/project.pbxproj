@@ -35,7 +35,7 @@
 		6EC6BC6F2A1ACD4C00021FA7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC6E2A1ACD4C00021FA7 /* HistoryViewController.swift */; };
 		6EC6BC712A1ACD7D00021FA7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6BC702A1ACD7D00021FA7 /* lottie.json */; };
 		6EC6BC732A1BAF5C00021FA7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC722A1BAF5C00021FA7 /* SettingsViewController.swift */; };
-		6EC6BC772A1BB0AC00021FA7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC762A1BB0AC00021FA7 /* History.swift */; };
+		6EC6BC772A1BB0AC00021FA7 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC762A1BB0AC00021FA7 /* HistoryCoordinator.swift */; };
 		6EC6BC7A2A1BCD5700021FA7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6BC792A1BCD5700021FA7 /* CoreData.framework */; };
 		6EC6BC7D2A1BD23900021FA7 /* ScannedFiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC7B2A1BD23900021FA7 /* ScannedFiles.xcdatamodeld */; };
 		6EC6BC7F2A1BDB8000021FA7 /* History + CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC7E2A1BDB8000021FA7 /* History + CoreData.swift */; };
@@ -113,7 +113,7 @@
 		6EC6BC6E2A1ACD4C00021FA7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		6EC6BC702A1ACD7D00021FA7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
 		6EC6BC722A1BAF5C00021FA7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		6EC6BC762A1BB0AC00021FA7 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		6EC6BC762A1BB0AC00021FA7 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
 		6EC6BC792A1BCD5700021FA7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6EC6BC7C2A1BD23900021FA7 /* ScannedFiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScannedFiles.xcdatamodel; sourceTree = "<group>"; };
 		6EC6BC7E2A1BDB8000021FA7 /* History + CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History + CoreData.swift"; sourceTree = "<group>"; };
@@ -188,14 +188,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		6E0350282A0D74C200ECAD22 /* Recent */ = {
+		6E0350282A0D74C200ECAD22 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				6EC6BC762A1BB0AC00021FA7 /* History.swift */,
+				6EC6BC762A1BB0AC00021FA7 /* HistoryCoordinator.swift */,
 				6EC6BC752A1BB07B00021FA7 /* ViewModel */,
 				6EC6BC742A1BB07500021FA7 /* View */,
 			);
-			path = Recent;
+			path = History;
 			sourceTree = "<group>";
 		};
 		6E0350292A0D74CC00ECAD22 /* Settings */ = {
@@ -404,7 +404,7 @@
 				6E0350572A0DA02C00ECAD22 /* MainTabbarController.swift */,
 				6E03502E2A0D757600ECAD22 /* MainCoordinator.swift */,
 				6E0350272A0D74BE00ECAD22 /* Home */,
-				6E0350282A0D74C200ECAD22 /* Recent */,
+				6E0350282A0D74C200ECAD22 /* History */,
 				6E0350292A0D74CC00ECAD22 /* Settings */,
 			);
 			path = Main;
@@ -760,7 +760,7 @@
 				6E0350402A0D7B1B00ECAD22 /* HomeViewModel.swift in Sources */,
 				6EC6BC732A1BAF5C00021FA7 /* SettingsViewController.swift in Sources */,
 				6EC6BC882A1BE64A00021FA7 /* RecentTableViewCell.swift in Sources */,
-				6EC6BC772A1BB0AC00021FA7 /* History.swift in Sources */,
+				6EC6BC772A1BB0AC00021FA7 /* HistoryCoordinator.swift in Sources */,
 				6E0350342A0D762D00ECAD22 /* Storyboarded.swift in Sources */,
 				6E0350582A0DA02C00ECAD22 /* MainTabbarController.swift in Sources */,
 				6E03503E2A0D79A700ECAD22 /* AlertViewHelper.swift in Sources */,

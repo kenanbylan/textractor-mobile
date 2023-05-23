@@ -7,8 +7,11 @@
 
 import UIKit
 import CoreData
+import PanModal
+import ProgressHUD
 
-class HomeViewController: UIViewController  {
+
+class HomeViewController: UIViewController {
     
     
     let viewModel = HomeViewModel()
@@ -37,13 +40,10 @@ class HomeViewController: UIViewController  {
         super.viewDidLoad()
         
         
-        
         //MARK: GET Request
         viewModel.getLanguage() //sayfa açıldığında otomatik olarak istek atılır ve datalar çekilir.
         tapGasture()
         customUIEdit()
-        
-        
         
     }
     
@@ -59,6 +59,7 @@ class HomeViewController: UIViewController  {
         textView.layer.borderWidth = 2
         textView.layer.borderColor = UIColor(named: "text-color")?.cgColor
         textView.layer.cornerRadius = 12
+        
     }
     
     
@@ -97,6 +98,7 @@ class HomeViewController: UIViewController  {
             alertController.addAction(action)
         }
         
+        
         present(alertController, animated: true)
         print("languageButtonTapped")
     }
@@ -104,28 +106,37 @@ class HomeViewController: UIViewController  {
     
     @IBAction func scanButtonTapped(_ sender: Any) {
         
+        guard let imageUrlString = imageUrlString else {
+            ProgressHUD.show("Please select an image", icon: .privacy, delay: 2.0)
+            return
+        }
         
-        self.viewModel.postImagetoText(imageUrl: self.imageUrlString!, lang: self.selectedLangCode!) { [weak self] in
+        guard let selectedLangCode = selectedLangCode else {
+            ProgressHUD.show("Please select an language", icon: .privacy, delay: 2.0)
+            return
+        }
+        
+        guard let selectedType = selectedType else {
+            ProgressHUD.show("Please select an Type", icon: .privacy, delay: 2.0)
+            return
+        }
+        
+        self.viewModel.postImagetoText(imageUrl: imageUrlString, lang: selectedLangCode) { [weak self] in
             DispatchQueue.main.async {
                 self?.textView.text = self?.viewModel.textViewData
-                //print("View Controller textViewData: ", self?.viewModel.textViewData)
+                
                 
                 
                 //MARK: CoreData Insert Operation
                 guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
                 let context = appDelegate.persistentContainer.viewContext
                 
-                
-                
-                guard let entity = NSEntityDescription.entity(forEntityName: "Recent", in: context) else {
-                    fatalError("Failed to retrieve enetity description.")
-                    return  }
+                guard let entity = NSEntityDescription.entity(forEntityName: "Recent", in: context) else { return  }
 
-                
                 let recentObject = NSManagedObject(entity: entity, insertInto: context)
                 
                 recentObject.setValue(self!.viewModel.textViewData, forKey: "text")
-                recentObject.setValue(self!.selectedLanguage, forKey: "language")
+                recentObject.setValue(selectedLangCode, forKey: "language")
                 recentObject.setValue(UUID(), forKey: "id")
                 
                 do {
@@ -134,10 +145,12 @@ class HomeViewController: UIViewController  {
                 } catch {
                     print("error:",error.localizedDescription)
                 }
+                
+                NotificationCenter.default.post(name: NSNotification.Name.init("newData"), object: nil)
+            
             }
         }
     }
-    
     
 }
 
@@ -175,7 +188,24 @@ extension HomeViewController {
         
         languageButton.setTitle(language.language, for: .normal)
         selectedLangCode = language.code
+        selectedLanguage = language.language
         
     }
     
 }
+
+
+extension HomeViewController: PanModalPresentable {
+    var panScrollable: UIScrollView? {
+        nil
+    }
+    
+    var shortFormHeight: PanModalHeight {
+        return .contentHeight(312)
+    }
+    
+    var cornerRadius: CGFloat {
+        16
+    }
+}
+

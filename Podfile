@@ -12,6 +12,7 @@ target 'OCRMobile' do
   pod 'ProgressHUD'
   pod 'lottie-ios'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'PanModal'
 
   
   target 'OCRMobileTests' do

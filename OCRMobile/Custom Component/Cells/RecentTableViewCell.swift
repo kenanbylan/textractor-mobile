@@ -17,6 +17,9 @@ class RecentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+     
+        
+        layer.backgroundColor = UIColor.blue.cgColor
         
     }
     
