@@ -14,6 +14,7 @@ class ImageToTextScannerViewModel {
     static let shared = ImageToTextScannerViewModel()
     var coordinator: ImageToTextCoordinator?
     
+    
     let manager = HomeManager.shared
     
     

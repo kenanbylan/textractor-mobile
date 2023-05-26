@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController , Storyboarded {
     
     static let shared = HistoryViewController()
     
@@ -32,8 +32,8 @@ class HistoryViewController: UIViewController {
         registerNibs()
         getCoreData()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
+        
+        
         navigationItem.title = "Recent Scanner"
         
         
@@ -50,7 +50,6 @@ class HistoryViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(getCoreData), name: NSNotification.Name.init("newData"), object: nil)
         
     }
-    
     
     @objc func getCoreData() {
         
