@@ -11,13 +11,13 @@ import GoogleMobileAds
 
 
 class SettingsViewController: UIViewController {
-
- //   @IBOutlet weak var lottieView: LottieAnimationView!
+    
+    //   @IBOutlet weak var lottieView: LottieAnimationView!
     var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
@@ -39,30 +39,30 @@ class SettingsViewController: UIViewController {
         bannerView.backgroundColor = .gray
         view.addSubview(bannerView)
         view.addConstraints(
-          [NSLayoutConstraint(item: bannerView,
-                              attribute: .bottom,
-                              relatedBy: .equal,
-                              toItem: view.safeAreaLayoutGuide,
-                              attribute: .bottom,
-                              multiplier: 1,
-                              constant: 0),
-           NSLayoutConstraint(item: bannerView,
-                              attribute: .centerX,
-                              relatedBy: .equal,
-                              toItem: view,
-                              attribute: .centerX,
-                              multiplier: 1,
-                              constant: 0)
-          ])
-       }
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: view.safeAreaLayoutGuide,
+                                attribute: .bottom,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
 }
 
 
 extension SettingsViewController: GADBannerViewDelegate {
     
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-      // Add banner to view and add constraints as above.
-      addBannerViewToView(bannerView)
+        // Add banner to view and add constraints as above.
+        addBannerViewToView(bannerView)
     }
     
     

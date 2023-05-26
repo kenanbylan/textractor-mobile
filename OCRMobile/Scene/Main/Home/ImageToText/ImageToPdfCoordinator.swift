@@ -1,16 +1,16 @@
 //
-//  HomeCoordinator.swift
+//  Coordinator.swift
 //  OCRMobile
 //
-//  Created by Kenan Baylan on 26.05.2023.
-//
+//  Created by Kenan Baylan on 11.05.2023.
+
 
 import Foundation
-
 import UIKit
 
 
-class HomeCoordinator : Coordinator {
+class ImageToPdfCoordinator : Coordinator {
+    
     
     var navigationController: UINavigationController
     
@@ -24,10 +24,11 @@ class HomeCoordinator : Coordinator {
         navigationController.show(controller, sender: nil)
     }
     
-    func showImageToPdfPage() {
-        let controller = ImagetoTextScannerViewController.instantiate(name: .main)
-        navigationController.show(controller, sender: nil)
-        
+    
+    func presentAlert(_ alertController: UIAlertController, animated: Bool, completion: (() -> Void)?) {
+        navigationController.present(alertController, animated: animated, completion: completion)
     }
     
+    
 }
+
