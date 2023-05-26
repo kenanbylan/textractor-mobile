@@ -6,9 +6,9 @@
 import Foundation
 import ProgressHUD
 
-class HomeViewModel {
+class ImageToScannerViewModel {
     
-    static let shared = HomeViewModel()
+    static let shared = ImageToScannerViewModel()
     
     var coordinator: ImageToPdfCoordinator?
     let manager = HomeManager.shared //home manager hata olabilir.
