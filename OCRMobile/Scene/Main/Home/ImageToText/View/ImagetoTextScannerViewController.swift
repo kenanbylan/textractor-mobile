@@ -13,7 +13,7 @@ import VisionKit
 
 class ImagetoTextScannerViewController: UIViewController, Storyboarded {
     
-    let viewModel = HomeViewModel()
+    let viewModel = ImageToScannerViewModel()
     let context = AppDelegate()
     
     //MARK: UIElements
