@@ -11,9 +11,8 @@
 		6E0350322A0D75AE00ECAD22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0350312A0D75AE00ECAD22 /* Coordinator.swift */; };
 		6E0350342A0D762D00ECAD22 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0350332A0D762D00ECAD22 /* Storyboarded.swift */; };
 		6E0350392A0D782300ECAD22 /* ImagetoTextScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0350382A0D782300ECAD22 /* ImagetoTextScannerViewController.swift */; };
-		6E03503B2A0D790200ECAD22 /* ImageToPdfCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03503A2A0D790200ECAD22 /* ImageToPdfCoordinator.swift */; };
+		6E03503B2A0D790200ECAD22 /* ImageToTextCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03503A2A0D790200ECAD22 /* ImageToTextCoordinator.swift */; };
 		6E03503E2A0D79A700ECAD22 /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03503D2A0D79A700ECAD22 /* AlertViewHelper.swift */; };
-		6E0350402A0D7B1B00ECAD22 /* ImageToScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03503F2A0D7B1B00ECAD22 /* ImageToScannerViewModel.swift */; };
 		6E0350422A0D7BCA00ECAD22 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0350412A0D7BCA00ECAD22 /* HomeManager.swift */; };
 		6E0350472A0D800C00ECAD22 /* LoadingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0350462A0D800C00ECAD22 /* LoadingCoordinator.swift */; };
 		6E03504F2A0D891E00ECAD22 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E03504E2A0D891E00ECAD22 /* LoadingViewModel.swift */; };
@@ -91,9 +90,8 @@
 		6E0350312A0D75AE00ECAD22 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6E0350332A0D762D00ECAD22 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		6E0350382A0D782300ECAD22 /* ImagetoTextScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagetoTextScannerViewController.swift; sourceTree = "<group>"; };
-		6E03503A2A0D790200ECAD22 /* ImageToPdfCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPdfCoordinator.swift; sourceTree = "<group>"; };
+		6E03503A2A0D790200ECAD22 /* ImageToTextCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToTextCoordinator.swift; sourceTree = "<group>"; };
 		6E03503D2A0D79A700ECAD22 /* AlertViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewHelper.swift; sourceTree = "<group>"; };
-		6E03503F2A0D7B1B00ECAD22 /* ImageToScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToScannerViewModel.swift; sourceTree = "<group>"; };
 		6E0350412A0D7BCA00ECAD22 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		6E0350462A0D800C00ECAD22 /* LoadingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCoordinator.swift; sourceTree = "<group>"; };
 		6E03504C2A0D82EE00ECAD22 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -201,7 +199,7 @@
 		6E0350272A0D74BE00ECAD22 /* ImageToText */ = {
 			isa = PBXGroup;
 			children = (
-				6E03503A2A0D790200ECAD22 /* ImageToPdfCoordinator.swift */,
+				6E03503A2A0D790200ECAD22 /* ImageToTextCoordinator.swift */,
 				6E0350372A0D780F00ECAD22 /* ViewModel */,
 				6E0350352A0D780000ECAD22 /* View */,
 				6E0350282A0D74C200ECAD22 /* History */,
@@ -249,7 +247,6 @@
 		6E0350372A0D780F00ECAD22 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6E03503F2A0D7B1B00ECAD22 /* ImageToScannerViewModel.swift */,
 				6EEF28AE2A195E2A0074536D /* ImageToTextScannerViewModel.swift */,
 			);
 			path = ViewModel;
@@ -498,10 +495,10 @@
 		6EC46BFA2A20A9DE00849B2C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6EC46BFB2A20A9ED00849B2C /* View */,
-				6EC46BFC2A20A9F200849B2C /* ViewModel */,
-				6E0350272A0D74BE00ECAD22 /* ImageToText */,
 				6EC46C032A20D16200849B2C /* HomeCoordinator.swift */,
+				6EC46BFC2A20A9F200849B2C /* ViewModel */,
+				6EC46BFB2A20A9ED00849B2C /* View */,
+				6E0350272A0D74BE00ECAD22 /* ImageToText */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -833,7 +830,7 @@
 				6EEF28A42A18FA120074536D /* Constant.swift in Sources */,
 				6E0350422A0D7BCA00ECAD22 /* HomeManager.swift in Sources */,
 				6EC46C062A20F3CC00849B2C /* HomeViewModel.swift in Sources */,
-				6E03503B2A0D790200ECAD22 /* ImageToPdfCoordinator.swift in Sources */,
+				6E03503B2A0D790200ECAD22 /* ImageToTextCoordinator.swift in Sources */,
 				6E03502F2A0D757600ECAD22 /* MainCoordinator.swift in Sources */,
 				6EC46C042A20D16200849B2C /* HomeCoordinator.swift in Sources */,
 				6EC6BC6C2A1AAF1300021FA7 /* Recognize.swift in Sources */,
@@ -856,7 +853,6 @@
 				6E0350472A0D800C00ECAD22 /* LoadingCoordinator.swift in Sources */,
 				6E0350392A0D782300ECAD22 /* ImagetoTextScannerViewController.swift in Sources */,
 				6EEF28A82A194C270074536D /* Languages.swift in Sources */,
-				6E0350402A0D7B1B00ECAD22 /* ImageToScannerViewModel.swift in Sources */,
 				6EC6BC732A1BAF5C00021FA7 /* SettingsViewController.swift in Sources */,
 				6EC6BC772A1BB0AC00021FA7 /* HistoryCoordinator.swift in Sources */,
 				6EC46BE82A1F700900849B2C /* NibReuseProtocol.swift in Sources */,

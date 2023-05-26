@@ -8,7 +8,7 @@
 import Foundation
 
 import UIKit
-
+import PanModal
 
 class HomeCoordinator : Coordinator {
     
@@ -27,7 +27,7 @@ class HomeCoordinator : Coordinator {
     func showImageToPdfPage() {
         let controller = ImagetoTextScannerViewController.instantiate(name: .main)
         navigationController.show(controller, sender: nil)
-        
     }
+    
     
 }

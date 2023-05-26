@@ -13,76 +13,49 @@ import VisionKit
 
 class ImagetoTextScannerViewController: UIViewController, Storyboarded {
     
-    let viewModel = ImageToScannerViewModel()
+    let viewModel = ImageToTextScannerViewModel()
     let context = AppDelegate()
     
     //MARK: UIElements
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var typeButton: AppButton!
     @IBOutlet weak var languageButton: AppButton!
     @IBOutlet weak var scanButton: AppButton!
     @IBOutlet weak var textView: UITextView!
     
-
     //MARK: Variables
     var selectedLanguage: String?
     var selectedLangCode: String?
-    var selectedType: String?
     var selectedImage: UIImage?
-    
     var imageUrlString: String?
     
     
     
-    /// Checks if is supported and isAvailable'
-    var scannerAvailable: Bool {
-        DataScannerViewController.isSupported && DataScannerViewController.isAvailable
-        
-    }
-    
-    
-    
-    //MARK: Const Data
-    var typeArray = ["Image to Text", "Image to Pdf","Pdf to Text"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//
+//        //HomeViewController'a taşınacak.
+//        let cameraScan = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(cameraScanVC))
+//        navigationItem.rightBarButtonItem = cameraScan
+//
         
-        let cameraScan = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(cameraScanVC))
-        navigationItem.rightBarButtonItem = cameraScan
+        let historyTextScanButton = UIBarButtonItem(image: UIImage(named: "recent"), style: .done, target: self, action: #selector(historyButton) )
+        navigationItem.rightBarButtonItem = historyTextScanButton
         
         
         tapGasture()
         customUIEdit()
-    }
-    
-    
-    
-    @objc func cameraScanVC() {
-        
-        //        let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "CameraScanViewController") as! CameraScanViewController
-        //            self.navigationController?.pushViewController(nextViewController, animated: true)
-        
-        guard scannerAvailable == true else {
             
-            print(" Error: Scanner is not available for usage. Please check settings.")
-            return
-        }
-        
-        
-        let dataScanner = DataScannerViewController(recognizedDataTypes: [.text(), .barcode()], isHighlightingEnabled: true)
-        
-        dataScanner.delegate = self
-        
-        present(dataScanner, animated: true ) {
-            try? dataScanner.startScanning()
-        }
-        
-        
+        viewModel.getLanguage()
+
     }
     
+
+
+    @objc func historyButton(){
+        
+    }
     
     func tapGasture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
@@ -108,35 +81,24 @@ class ImagetoTextScannerViewController: UIViewController, Storyboarded {
     }
     
     
-    @IBAction func typeButtonTapped(_ sender: Any) {
+    @IBAction func languageButtonTapped(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Choose Type", message: nil, preferredStyle: .actionSheet)
-        for types in typeArray {
-            let action =  UIAlertAction(title: types, style: .default) { _ in
-                self.selectedType = types
-                self.typeButton.setTitle(types, for: .normal)
-            }
-            alertController.addAction(action)
-        }
+        viewModel.coordinator?.showLanguageModal()
+        print("Language button tapped")
+        
+        
+                let alertController = UIAlertController(title: "Choose Language", message: nil, preferredStyle: .actionSheet)
+        
+                for lang in viewModel.textLanguage  {
+                    let action = UIAlertAction(title: lang.language, style: .default) { _ in
+                        self.handleLanguageSelection(lang)
+                    }
+                    alertController.addAction(action)
+                }
+        
         
         present(alertController, animated: true)
-        
-    }
-    
-    @IBAction func languageButtonTapped(_ sender: Any) {
-        //
-        //        let alertController = UIAlertController(title: "Choose Language", message: nil, preferredStyle: .actionSheet)
-        //
-        //        for lang in viewModel.textLanguage  {
-        //            let action = UIAlertAction(title: lang.language, style: .default) { _ in
-        //                self.handleLanguageSelection(lang)
-        //            }
-        //            alertController.addAction(action)
-        //        }
-        //
-        //
-        //        present(alertController, animated: true)
-        //        print("languageButtonTapped")
+        print("languageButtonTapped")
         
     }
     
@@ -155,15 +117,10 @@ class ImagetoTextScannerViewController: UIViewController, Storyboarded {
             return
         }
         
-        guard let selectedType = selectedType else {
-            ProgressHUD.show("Please select an Type", icon: .privacy, delay: 2.0)
-            return
-        }
-        
         self.viewModel.postImagetoText(imageUrl: imageUrlString, lang: selectedLangCode) { [weak self] in
             DispatchQueue.main.async {
-                self?.textView.text = self?.viewModel.textViewData
                 
+                self?.textView.text = self?.viewModel.textViewData
                 
                 
                 //MARK: CoreData Insert Operation
@@ -174,9 +131,9 @@ class ImagetoTextScannerViewController: UIViewController, Storyboarded {
                 
                 let recentObject = NSManagedObject(entity: entity, insertInto: context)
                 
-                recentObject.setValue(self!.viewModel.textViewData, forKey: "text")
                 recentObject.setValue(selectedLangCode, forKey: "language")
                 recentObject.setValue(UUID(), forKey: "id")
+                
                 
                 do {
                     try context.save()
@@ -250,27 +207,3 @@ extension ImagetoTextScannerViewController: PanModalPresentable {
     }
 }
 
-
-//MARK: - for quickly camera scanner
-
-extension ImagetoTextScannerViewController: DataScannerViewControllerDelegate {
-    
-    func dataScanner(_ dataScanner: DataScannerViewController, didTapOn item: RecognizedItem) {
-        
-        switch item {
-            
-        case .text(let text):
-            print("Scanner Text: \(text.transcript)")
-            UIPasteboard.general.string = text.transcript
-            
-        case .barcode(let code):
-            guard let urlString = code.payloadStringValue else { return }
-            guard let url = URL(string: urlString) else { return }
-            UIApplication.shared.open(url)
-            
-        @unknown default:
-            print(" Error: Scanner is not available for usage. Please check settings.")
-        }
-        
-    }
-}
