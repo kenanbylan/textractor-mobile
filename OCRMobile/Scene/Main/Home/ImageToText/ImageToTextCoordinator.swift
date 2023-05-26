@@ -11,6 +11,7 @@ import UIKit
 
 class ImageToTextCoordinator : Coordinator {
     
+    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -37,8 +38,12 @@ class ImageToTextCoordinator : Coordinator {
         controller.selectionCallback = { [weak self] language in
             self?.languageSelection?(language)
         }
-        
         navigationController.presentPanModal(controller)
+    }
+    
+    func showHistoryPage() {
+        let controller = HistoryViewController.instantiate(name: .main)
+        navigationController.show(controller, sender: nil)
     }
     
     
