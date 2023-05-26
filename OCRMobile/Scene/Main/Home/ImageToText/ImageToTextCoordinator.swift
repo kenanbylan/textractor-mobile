@@ -9,14 +9,16 @@ import Foundation
 import UIKit
 
 
-class ImageToPdfCoordinator : Coordinator {
-    
+class ImageToTextCoordinator : Coordinator {
     
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
+    
+    var languageSelection: ((Languages)->())?
     
     
     func start() {
@@ -27,6 +29,16 @@ class ImageToPdfCoordinator : Coordinator {
     
     func presentAlert(_ alertController: UIAlertController, animated: Bool, completion: (() -> Void)?) {
         navigationController.present(alertController, animated: animated, completion: completion)
+    }
+    
+    
+    func showLanguageModal() {
+        let controller = LanguageViewController.instantiate(name: .main)
+        controller.selectionCallback = { [weak self] language in
+            self?.languageSelection?(language)
+        }
+        
+        navigationController.presentPanModal(controller)
     }
     
     

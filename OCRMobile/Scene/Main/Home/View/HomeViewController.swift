@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import VisionKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, Storyboarded {
     
     
     let coordinator: HomeCoordinator? = nil
@@ -21,6 +22,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imageToTextView: ScanCardView!
     
     
+    /// Checks if is supported and isAvailable'
+    var scannerAvailable: Bool {
+        DataScannerViewController.isSupported && DataScannerViewController.isAvailable
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +35,7 @@ class HomeViewController: UIViewController {
         
         tapGestureSetup()
     }
+    
     
     
     func tapGestureSetup() {
@@ -56,17 +64,29 @@ class HomeViewController: UIViewController {
 }
 
 
+
 extension HomeViewController {
     
     @objc func imageToPdfTapped() {
         imageToPdfView.addTapAnimation()
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ImagetoTextScannerViewController") as! ImagetoTextScannerViewController
-        self.navigationController?.pushViewController(controller, animated: true)
         
     }
     
     @objc func qrCodeTapped() {
         qrCodeView.addTapAnimation()
+        
+        guard scannerAvailable == true else {
+            print(" Error: Scanner is not available for usage. Please check settings.")
+            return
+        }        
+        let dataScanner = DataScannerViewController(recognizedDataTypes: [ .barcode()], isHighlightingEnabled: true)
+        
+        dataScanner.delegate = self
+        
+        present(dataScanner, animated: true ) {
+            try? dataScanner.startScanning()
+        }
+        
         
     }
     
@@ -76,6 +96,28 @@ extension HomeViewController {
     
     @objc func imageToTextTapped() {
         imageToTextView.addTapAnimation()
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ImagetoTextScannerViewController") as! ImagetoTextScannerViewController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
+}
+
+
+
+extension HomeViewController: DataScannerViewControllerDelegate {
+    
+    func dataScanner(_ dataScanner: DataScannerViewController, didTapOn item: RecognizedItem) {
+        
+        switch item {
+        case .barcode(let code):
+            guard let urlString = code.payloadStringValue else { return }
+            guard let url = URL(string: urlString) else { return }
+            UIApplication.shared.open(url)
+            
+       
+        @unknown default:
+            print(" Error: Scanner is not available for usage. Please check settings.")
+        }
+        
+    }
 }

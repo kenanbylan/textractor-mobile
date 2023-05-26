@@ -3,30 +3,31 @@
 //  OCRMobile
 //
 //  Created by Kenan Baylan on 20.05.2023.
-//
+
 
 import UIKit
 import PanModal
 
 class LanguageViewController: UIViewController, Storyboarded {
-
     
+    static let identifier = String(describing: LoadingViewController.self)
+
     @IBOutlet private weak var table: UITableView!
     
     let viewModel = ImageToTextScannerViewModel()
     
+    var selectionCallback: ((Languages)->())?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        table.registerCell(type: Tablevce)
+        table.registerCell(type: LanguageTableViewCell.self)
     }
 }
 
 
 extension LanguageViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -39,6 +40,18 @@ extension LanguageViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dismiss(animated: true) { [weak self] in
+            self?.selectionCallback?((self?.viewModel.textLanguage[indexPath.row])!)
+
+        }
+        
+        
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50
     }
@@ -47,7 +60,7 @@ extension LanguageViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension LanguageViewController: PanModalPresentable {
     
-        var panScrollable: UIScrollView? {
+    var panScrollable: UIScrollView? {
         nil
     }
     
