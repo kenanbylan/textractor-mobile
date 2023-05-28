@@ -1,7 +1,6 @@
 //
 //  HomeViewController.swift
 //  OCRMobile
-//
 //  Created by Kenan Baylan on 11.05.2023.
 
 import UIKit

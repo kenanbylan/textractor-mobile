@@ -87,7 +87,6 @@ class HistoryViewController: UIViewController , Storyboarded {
     func registerNibs() {
         let historyNibname = HistoryCollectionViewCell.identifier
         historyCollectionView.register(UINib(nibName: historyNibname, bundle: nil), forCellWithReuseIdentifier: historyNibname)
-        
     }
     
 }

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 public protocol NibProtocol: AnyObject {
     static var nib: UINib { get }
 }

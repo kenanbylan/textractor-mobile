@@ -30,9 +30,6 @@ class HomeViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         tapGestureSetup()
     }
     
@@ -70,6 +67,10 @@ extension HomeViewController {
     @objc func imageToPdfTapped() {
         imageToPdfView.addTapAnimation()
         
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ImageToPdfViewController") as! ImageToPdfViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+//        coordinator?.showImageToPdfPage()
     }
     
     @objc func qrCodeTapped() {

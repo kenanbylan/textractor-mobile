@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XWe-vR-91H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d7p-Vd-ytt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -519,12 +519,122 @@
             </objects>
             <point key="canvasLocation" x="1097" y="-499"/>
         </scene>
+        <!--Image to Pdf Convert-->
+        <scene sceneID="oOF-e7-Muw">
+            <objects>
+                <viewController storyboardIdentifier="ImageToPdfViewController" id="g6h-wC-RlO" customClass="ImageToPdfViewController" customModule="OCRMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V9D-VD-xQH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagetopdfconvert" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-rg-nhY">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Eny-Tj-YrU"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BUO-5p-fc2">
+                                <rect key="frame" x="0.0" y="250" width="393" height="458"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="ZiY-dp-gBW">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="ImageConvertPdfCollectionViewCell" id="BJQ-8P-UaV" customClass="ImageConvertPdfCollectionViewCell" customModule="OCRMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="20" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NkK-dG-TDI">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="g6h-wC-RlO" id="l4g-76-MEG"/>
+                                    <outlet property="delegate" destination="g6h-wC-RlO" id="zmJ-Hg-h7O"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-Lv-4Be">
+                                <rect key="frame" x="30" y="728" width="333" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-mI-7R7" customClass="ConvertButton" customModule="OCRMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add Document">
+                                            <color key="titleColor" name="text-color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addDocButtonTapped:" destination="g6h-wC-RlO" eventType="touchUpInside" id="Aor-ec-dTC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN3-Up-Pm3" customClass="ConvertButton" customModule="OCRMobile" customModuleProvider="target">
+                                        <rect key="frame" x="191.66666666666663" y="0.0" width="141.33333333333337" height="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Convert">
+                                            <color key="titleColor" name="text-color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="convertButtonTapped:" destination="g6h-wC-RlO" eventType="touchUpInside" id="9PM-Re-Afz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gE1-8L-GKc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="09h-ct-P37"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BUO-5p-fc2" firstAttribute="top" secondItem="9IT-rg-nhY" secondAttribute="bottom" id="6qe-xm-H6T"/>
+                            <constraint firstItem="9IT-rg-nhY" firstAttribute="leading" secondItem="09h-ct-P37" secondAttribute="leading" id="C4x-IT-ocz"/>
+                            <constraint firstItem="9IT-rg-nhY" firstAttribute="trailing" secondItem="09h-ct-P37" secondAttribute="trailing" id="FAq-A2-Qx0"/>
+                            <constraint firstItem="09h-ct-P37" firstAttribute="trailing" secondItem="cJB-Lv-4Be" secondAttribute="trailing" constant="30" id="IgT-o4-Iai"/>
+                            <constraint firstItem="09h-ct-P37" firstAttribute="bottom" secondItem="cJB-Lv-4Be" secondAttribute="bottom" constant="50" id="c5l-Wh-wju"/>
+                            <constraint firstItem="BUO-5p-fc2" firstAttribute="trailing" secondItem="09h-ct-P37" secondAttribute="trailing" id="cCp-3f-nik"/>
+                            <constraint firstItem="cJB-Lv-4Be" firstAttribute="top" secondItem="BUO-5p-fc2" secondAttribute="bottom" constant="20" id="dUb-W9-9wd"/>
+                            <constraint firstItem="BUO-5p-fc2" firstAttribute="leading" secondItem="09h-ct-P37" secondAttribute="leading" id="fVE-ZR-u2l"/>
+                            <constraint firstItem="cJB-Lv-4Be" firstAttribute="leading" secondItem="09h-ct-P37" secondAttribute="leading" constant="30" id="jse-7W-xUL"/>
+                            <constraint firstItem="9IT-rg-nhY" firstAttribute="top" secondItem="V9D-VD-xQH" secondAttribute="top" id="wE5-Tl-Djv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image to Pdf Convert" id="38N-yX-udU"/>
+                    <connections>
+                        <outlet property="imageToPdfCollectionView" destination="BUO-5p-fc2" id="DWG-Yv-UpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rle-4C-h2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023.6641221374045" y="221.12676056338029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zRC-nW-PGa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d7p-Vd-ytt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sfl-U5-WjW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g6h-wC-RlO" kind="relationship" relationship="rootViewController" id="MwP-tF-9DX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aor-WQ-96Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096.9465648854962" y="221.12676056338029"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barcode-scanner" width="24" height="24"/>
         <image name="file" width="512" height="512"/>
         <image name="house" width="24" height="24"/>
         <image name="image 1" width="256" height="256"/>
+        <image name="imagetopdfconvert" width="2000" height="2000"/>
         <image name="logo 1" width="11303" height="1942"/>
         <image name="pdf-2" width="512" height="512"/>
         <image name="qr-code" width="512" height="512"/>
