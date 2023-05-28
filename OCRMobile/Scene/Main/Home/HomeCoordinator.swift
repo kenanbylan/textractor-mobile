@@ -25,9 +25,13 @@ class HomeCoordinator : Coordinator {
     }
     
     func showImageToPdfPage() {
-        let controller = ImagetoTextScannerViewController.instantiate(name: .main)
-        navigationController.show(controller, sender: nil)
+        let controller = ImageToPdfViewController.instantiate(name: .main)
+        navigationController.pushViewController(controller, animated: true)
     }
+    
+    
+    
+    
     
     
 }

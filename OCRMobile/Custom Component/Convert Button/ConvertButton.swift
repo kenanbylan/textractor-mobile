@@ -1,14 +1,15 @@
 //
-//  Button.swift
+//  ConvertButton.swift
 //  OCRMobile
 //
-//  Created by Kenan Baylan on 20.05.2023.
+//  Created by Kenan Baylan on 28.05.2023.
 //
 
+import Foundation
 import UIKit
 
 
-class AppButton: UIButton {
+class ConvertButton: UIButton {
 
     
     override init(frame: CGRect) {
@@ -22,30 +23,22 @@ class AppButton: UIButton {
     }
     
     func setupButton() {
-        setShadow()
         
-        setTitleColor(.white, for: .normal)
-        backgroundColor = UIColor(named: "text-color")
+        setTitleColor(UIColor(named:"text-color"), for: .normal)
         titleLabel?.font = UIFont(name: "Poppins-Medium", size: 20)
         layer.cornerRadius = 12
-    }
-    
-    
-    
-    
-    
-    private func setShadow() {
+        
         layer.shadowColor   = UIColor.black.cgColor
         layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
         layer.shadowRadius  = 8
         layer.shadowOpacity = 0.5
-    
-        
+        layer.borderColor = UIColor(named: "text-color")?.cgColor
+        layer.borderWidth = 2.0
         shake()
     }
     
-    
     func shake() {
+        
         let shake = CABasicAnimation(keyPath: "position")
         shake.duration = 0.1
         shake.repeatCount = 2

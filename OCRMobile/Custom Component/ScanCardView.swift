@@ -23,7 +23,6 @@ class ScanCardView: UIView {
     }
     
     
-    
     func imageSetup() {
         
         layer.shadowColor = UIColor.black.cgColor
