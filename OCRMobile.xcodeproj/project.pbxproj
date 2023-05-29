@@ -562,8 +562,8 @@
 		6EC46C072A21666B00849B2C /* ImageToPdf */ = {
 			isa = PBXGroup;
 			children = (
-				6E612B6B2A240405002B5F20 /* Model */,
 				6EC46C0B2A2166A700849B2C /* ImageToPdfCoordinator.swift */,
+				6E612B6B2A240405002B5F20 /* Model */,
 				6EC46C082A21668200849B2C /* ViewModel */,
 				6EC46C0A2A21668F00849B2C /* View */,
 			);

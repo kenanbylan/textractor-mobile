@@ -8,38 +8,41 @@ import PDFKit
 
 class ImageToPdfViewController: UIViewController, Storyboarded, UINavigationControllerDelegate {
     
+    
+    
     //MARK: UIElements
     @IBOutlet weak var imageToPdfCollectionView: UICollectionView!
+    private var viewModel: ImageToPdfViewModel!
     
-    
-    //MARK: Variables
-    var selectedImages: [ImageData] = []
-    
-    
+    private var selectedImages: [ImageData] = []
+    let placeholderImage = UIImage(named: "scanner2")
+
     
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCellNibs()
-        
+        setupViewModel()
     }
     
-
+    private func setupViewModel() {
+        viewModel = ImageToPdfViewModel()
+        viewModel.delegate = self
+    }
+    
     func registerCellNibs() {
         let imageToPdfNibName = ImageConvertPdfCollectionViewCell.identifier
         imageToPdfCollectionView.register(UINib(nibName: imageToPdfNibName, bundle: nil), forCellWithReuseIdentifier: imageToPdfNibName)
     }
     
     
-    
-    
 }
 
 
-extension ImageToPdfViewController: UICollectionViewDelegate ,UICollectionViewDataSource {
+extension ImageToPdfViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return selectedImages.count
+        return viewModel.getNumberOfImages()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,7 +50,8 @@ extension ImageToPdfViewController: UICollectionViewDelegate ,UICollectionViewDa
         let identifier = ImageConvertPdfCollectionViewCell.identifier
         let cell = imageToPdfCollectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ImageConvertPdfCollectionViewCell
         
-        let imageInfo = selectedImages[indexPath.item]
+        let imageInfo = viewModel.getImageData(at: indexPath.row)
+        
         
         cell.setupImageConvertCell(fileSize: imageInfo.imageSize, fileName: imageInfo.imagePath)
         cell.fileNameLabel.text = imageInfo.imagePath
@@ -72,8 +76,11 @@ extension ImageToPdfViewController: ImageConvertPdfCollectionViewCellDelegate {
             return
         }
         
-        selectedImages.remove(at: indexPath.item)
-        imageToPdfCollectionView.deleteItems(at: [indexPath])
+        viewModel.removeImage(at: indexPath.item)
+        
+        
+        imageToPdfCollectionView.reloadData()
+        
     }
     
     
@@ -106,16 +113,14 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
                 formatter.countStyle = .file
                 let fileSizeString = formatter.string(fromByteCount: fileSize)
                 
-                let imageData = ImageData(image: selectedImage, imageSize:fileSizeString , imagePath: filePath)
-                selectedImages.append(imageData)
+                
+                viewModel?.addImage(image: selectedImage, fileSize: fileSizeString, imagePath: filePath)
                 imageToPdfCollectionView.reloadData()
+                dismiss(animated: true)
                 
             } catch {
                 print("Error writing image data to file: \(error)")
-                
             }
-            
-            
         }
     }
     
@@ -133,28 +138,30 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
     
     
     @IBAction func convertButtonTapped(_ sender: Any) {
-        let pdfDocument = PDFDocument()
         
-        for imageInfo in selectedImages {
-            if let pdfPage = PDFPage(image: imageInfo.image) {
-                pdfDocument.insert(pdfPage, at: pdfDocument.pageCount)
+        
+        if let pdfDocument = viewModel?.convertToPdf() {
+            
+            let filePath = ""
+            pdfDocument.write(toFile: filePath)
+            
+            
+            if (viewModel?.getNumberOfImages())! > 0 {
+                // Or present the PDF using UIActivityViewController
+                let activityViewController = UIActivityViewController(activityItems: [pdfDocument.dataRepresentation()], applicationActivities: nil)
+                present(activityViewController, animated: true, completion: nil)
+            } else {
+                //display an alert that no images are selected
             }
         }
         
-        let filePath = ""
-        pdfDocument.write(toFile: filePath)
         
-        
-        if selectedImages.isEmpty {
-            //will be alert
-            
-        } else {
-            
-            // Or present the PDF using UIActivityViewController
-            let activityViewController = UIActivityViewController(activityItems: [pdfDocument.dataRepresentation()], applicationActivities: nil)
-            present(activityViewController, animated: true, completion: nil)
-            
-        }
-        
+    }
+}
+
+// MARK: ImageToPdfViewModelDelegate
+extension ImageToPdfViewController: ImageToPdfViewModelDelegate {
+    func reloadData() {
+        imageToPdfCollectionView.reloadData()
     }
 }

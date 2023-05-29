@@ -46,8 +46,9 @@ class ImageConvertPdfCollectionViewCell: UICollectionViewCell {
     
     
     func setupImageConvertCell(fileSize: String, fileName: String) {
+        let displayName = URL(fileURLWithPath: fileName).lastPathComponent
         fileSizeLabel.text = fileSize
-        fileNameLabel.text = fileName
+        fileNameLabel.text = displayName
     }
 
     
