@@ -39,7 +39,6 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     
-    
     func searchService(service: String) {
         
     }
@@ -51,7 +50,6 @@ class HomeViewController: UIViewController, Storyboarded {
         let qrCodeTapGesture = UITapGestureRecognizer(target: self, action: #selector(qrCodeTapped))
         let mergedPdfTapGesture = UITapGestureRecognizer(target: self, action: #selector(mergedPdfTapped))
         let imageToTextTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageToTextTapped))
-        
         
         //Hatalı olabilir.
         let views: [UIView] = [imageToPdfView, imageToTextView, mergedPdfView, qrCodeView]
