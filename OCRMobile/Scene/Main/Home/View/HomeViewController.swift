@@ -10,7 +10,6 @@ import VisionKit
 
 class HomeViewController: UIViewController, Storyboarded {
     
-    
     let coordinator: HomeCoordinator? = nil
     
     //MARK: UIElements
@@ -20,6 +19,11 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var qrCodeView: ScanCardView!
     @IBOutlet weak var mergedPdfView: ScanCardView!
     @IBOutlet weak var imageToTextView: ScanCardView!
+    
+
+    //Popular Services
+    let services = ["Image to Pdf", "Qr Code", "Merged Pdf", "Image to Text"]
+
     
     
     /// Checks if is supported and isAvailable'
@@ -31,6 +35,13 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGestureSetup()
+        searchBar.delegate = self
+    }
+    
+    
+    
+    func searchService(service: String) {
+        
     }
     
     
@@ -54,6 +65,8 @@ class HomeViewController: UIViewController, Storyboarded {
             view.addGestureRecognizer(gesture)
         }
     }
+    
+    
     
     
     
@@ -119,6 +132,14 @@ extension HomeViewController: DataScannerViewControllerDelegate {
         @unknown default:
             print(" Error: Scanner is not available for usage. Please check settings.")
         }
+    }
+}
+
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
+    
 }
