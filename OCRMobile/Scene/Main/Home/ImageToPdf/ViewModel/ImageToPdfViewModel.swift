@@ -16,7 +16,7 @@ protocol ImageToPdfViewModelDelegate: AnyObject {
 
 
 class ImageToPdfViewModel {
-
+    
     weak var delegate: ImageToPdfViewModelDelegate?
     
     private var selectedImages: [ImageData] = []

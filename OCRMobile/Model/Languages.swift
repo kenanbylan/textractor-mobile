@@ -22,5 +22,4 @@ struct Languages: Codable {
         case version = "__v"
     }
     
-    
 }

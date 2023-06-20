@@ -12,17 +12,26 @@ class ImageToPdfViewController: UIViewController, Storyboarded, UINavigationCont
     
     //MARK: UIElements
     @IBOutlet weak var imageToPdfCollectionView: UICollectionView!
-    private var viewModel: ImageToPdfViewModel!
     
+    @IBOutlet weak var addImageImageView: UIImageView!
+    
+    
+    private var viewModel: ImageToPdfViewModel!
     private var selectedImages: [ImageData] = []
+    
+    
     let placeholderImage = UIImage(named: "scanner2")
-
+    
+    
     
     //MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCellNibs()
         setupViewModel()
+        
+        updateAddDocumentImageView()
     }
     
     private func setupViewModel() {
@@ -36,6 +45,9 @@ class ImageToPdfViewController: UIViewController, Storyboarded, UINavigationCont
     }
     
     
+    private func updateAddDocumentImageView() {
+        addImageImageView.isHidden = viewModel.getNumberOfImages() > 0
+    }
 }
 
 
@@ -64,8 +76,8 @@ extension ImageToPdfViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Select item: ", indexPath.row)
     }
-    
 }
+
 
 
 extension ImageToPdfViewController: ImageConvertPdfCollectionViewCellDelegate {
@@ -77,13 +89,8 @@ extension ImageToPdfViewController: ImageConvertPdfCollectionViewCellDelegate {
         }
         
         viewModel.removeImage(at: indexPath.item)
-        
-        
         imageToPdfCollectionView.reloadData()
-        
     }
-    
-    
 }
 
 extension ImageToPdfViewController: UIImagePickerControllerDelegate {
@@ -93,6 +100,8 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
         if let selectedImage = info[.originalImage] as? UIImage ,
            let imageData = selectedImage.jpegData(compressionQuality: 1.0) {
             let fileManager = FileManager.default
+            
+            
             let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
             guard let documentDirectory = documentsDirectory else {
                 return
@@ -100,6 +109,7 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
             
             
             let fileName = "\(UUID().uuidString).jpg" // Generate a unique file name
+            print("File Name: ", fileName)
             let filePath = documentDirectory.appendingPathComponent(fileName).path
             
             do {
@@ -124,7 +134,6 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
         }
     }
     
-    
     @IBAction func addDocButtonTapped(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
@@ -135,7 +144,6 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
         present(imagePicker, animated: true)
         
     }
-    
     
     @IBAction func convertButtonTapped(_ sender: Any) {
         
@@ -163,5 +171,6 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
 extension ImageToPdfViewController: ImageToPdfViewModelDelegate {
     func reloadData() {
         imageToPdfCollectionView.reloadData()
+        updateAddDocumentImageView()
     }
 }

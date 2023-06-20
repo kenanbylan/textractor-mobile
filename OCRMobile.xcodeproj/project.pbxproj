@@ -59,7 +59,6 @@
 		6EC6BC7A2A1BCD5700021FA7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC6BC792A1BCD5700021FA7 /* CoreData.framework */; };
 		6EC6BC7D2A1BD23900021FA7 /* ScannedFiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC7B2A1BD23900021FA7 /* ScannedFiles.xcdatamodeld */; };
 		6EC6BC8B2A1BF82C00021FA7 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC8A2A1BF82C00021FA7 /* HistoryViewModel.swift */; };
-		6EC6BC8D2A1BFE6800021FA7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6BC8C2A1BFE6800021FA7 /* CardView.swift */; };
 		6EEF28A22A18F9E60074536D /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF28A12A18F9E60074536D /* AppButton.swift */; };
 		6EEF28A42A18FA120074536D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF28A32A18FA120074536D /* Constant.swift */; };
 		6EEF28A62A19083D0074536D /* Directory + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF28A52A19083D0074536D /* Directory + Extension.swift */; };
@@ -67,6 +66,8 @@
 		6EEF28AD2A195D150074536D /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF28AC2A195D150074536D /* LanguageViewController.swift */; };
 		6EEF28AF2A195E2A0074536D /* ImageToTextScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF28AE2A195E2A0074536D /* ImageToTextScannerViewModel.swift */; };
 		6EEF28B62A196AF50074536D /* UImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF28B52A196AF50074536D /* UImageView + Extension.swift */; };
+		9347BF432A40DC2300B5FB34 /* MergePdfCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347BF422A40DC2300B5FB34 /* MergePdfCoordinator.swift */; };
+		9347BF482A40DCDB00B5FB34 /* MergePdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347BF472A40DCDB00B5FB34 /* MergePdfViewController.swift */; };
 		B2228608E6C59203FFBC5DAA /* Pods_OCRMobile_OCRMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789529E353ECA094C73C1641 /* Pods_OCRMobile_OCRMobileUITests.framework */; };
 		E2B6546A00160858B986534B /* Pods_OCRMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD7FC3D56314949EB61B2EF /* Pods_OCRMobile.framework */; };
 		FB03C2D52EAE6FA835395872 /* Pods_OCRMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CE168D68AF38DFD2CE5093 /* Pods_OCRMobileTests.framework */; };
@@ -153,7 +154,6 @@
 		6EC6BC792A1BCD5700021FA7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6EC6BC7C2A1BD23900021FA7 /* ScannedFiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScannedFiles.xcdatamodel; sourceTree = "<group>"; };
 		6EC6BC8A2A1BF82C00021FA7 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
-		6EC6BC8C2A1BFE6800021FA7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "../../../Invio Task /InvioTask/CustomViews/Cells/CardView.swift"; sourceTree = "<group>"; };
 		6EEF28A12A18F9E60074536D /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		6EEF28A32A18FA120074536D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6EEF28A52A19083D0074536D /* Directory + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Directory + Extension.swift"; sourceTree = "<group>"; };
@@ -164,6 +164,8 @@
 		6F59003DF276968CE570A1D1 /* Pods-OCRMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRMobileTests.release.xcconfig"; path = "Target Support Files/Pods-OCRMobileTests/Pods-OCRMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		7729973A20815E55420FD611 /* Pods-OCRMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRMobile.debug.xcconfig"; path = "Target Support Files/Pods-OCRMobile/Pods-OCRMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		789529E353ECA094C73C1641 /* Pods_OCRMobile_OCRMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRMobile_OCRMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9347BF422A40DC2300B5FB34 /* MergePdfCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergePdfCoordinator.swift; sourceTree = "<group>"; };
+		9347BF472A40DCDB00B5FB34 /* MergePdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergePdfViewController.swift; sourceTree = "<group>"; };
 		EBB0FA651057E7B4DA5EF01F /* Pods-OCRMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-OCRMobileTests/Pods-OCRMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBD7FC3D56314949EB61B2EF /* Pods_OCRMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F584D100BF68C44D0F162A00 /* Pods-OCRMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRMobile.release.xcconfig"; path = "Target Support Files/Pods-OCRMobile/Pods-OCRMobile.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,13 +268,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		6E03503C2A0D799500ECAD22 /* Util */ = {
+		6E03503C2A0D799500ECAD22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				6E03503D2A0D79A700ECAD22 /* AlertViewHelper.swift */,
 				6EEF28A32A18FA120074536D /* Constant.swift */,
 			);
-			path = Util;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6E0350432A0D7C6100ECAD22 /* Model */ = {
@@ -374,7 +376,7 @@
 				6E984DFE2A0914D6007D2E41 /* Assets */,
 				6E92CE772A084F3E0043365D /* Extension */,
 				6E92CE762A084F370043365D /* Network */,
-				6E03503C2A0D799500ECAD22 /* Util */,
+				6E03503C2A0D799500ECAD22 /* Utils */,
 				6E0350302A0D75A000ECAD22 /* Coordinator */,
 				6EEF28A02A18F9C70074536D /* Custom Component */,
 				6E0350432A0D7C6100ECAD22 /* Model */,
@@ -539,6 +541,7 @@
 				6EC46BFB2A20A9ED00849B2C /* View */,
 				6E0350272A0D74BE00ECAD22 /* ImageToText */,
 				6EC46C072A21666B00849B2C /* ImageToPdf */,
+				9347BF412A40DBCF00B5FB34 /* MergePdf */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -622,7 +625,6 @@
 			children = (
 				6E612B682A238E61002B5F20 /* Convert Button */,
 				6EC46BFF2A20BC2700849B2C /* ScanCardView.swift */,
-				6EC6BC8C2A1BFE6800021FA7 /* CardView.swift */,
 				6EEF28A12A18F9E60074536D /* AppButton.swift */,
 				6EEF28B02A195E5D0074536D /* Cells */,
 			);
@@ -650,6 +652,39 @@
 				6F59003DF276968CE570A1D1 /* Pods-OCRMobileTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9347BF412A40DBCF00B5FB34 /* MergePdf */ = {
+			isa = PBXGroup;
+			children = (
+				9347BF422A40DC2300B5FB34 /* MergePdfCoordinator.swift */,
+				9347BF462A40DC3F00B5FB34 /* Model */,
+				9347BF452A40DC3500B5FB34 /* ViewModel */,
+				9347BF442A40DC3100B5FB34 /* View */,
+			);
+			path = MergePdf;
+			sourceTree = "<group>";
+		};
+		9347BF442A40DC3100B5FB34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9347BF472A40DCDB00B5FB34 /* MergePdfViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9347BF452A40DC3500B5FB34 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9347BF462A40DC3F00B5FB34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -899,6 +934,7 @@
 				6E4010E02A096E470035804F /* NetworkManager.swift in Sources */,
 				6EEF28A42A18FA120074536D /* Constant.swift in Sources */,
 				6E0350422A0D7BCA00ECAD22 /* HomeManager.swift in Sources */,
+				9347BF432A40DC2300B5FB34 /* MergePdfCoordinator.swift in Sources */,
 				6E612B6A2A238E7E002B5F20 /* ConvertButton.swift in Sources */,
 				6EC46C062A20F3CC00849B2C /* HomeViewModel.swift in Sources */,
 				6EC46C102A2166EF00849B2C /* ImageToPdfViewModel.swift in Sources */,
@@ -914,6 +950,7 @@
 				6E03505A2A0DA62B00ECAD22 /* LoadingViewController.swift in Sources */,
 				6EC46BFE2A20A9FF00849B2C /* HomeViewController.swift in Sources */,
 				6EEF28AD2A195D150074536D /* LanguageViewController.swift in Sources */,
+				9347BF482A40DCDB00B5FB34 /* MergePdfViewController.swift in Sources */,
 				6EEF28A62A19083D0074536D /* Directory + Extension.swift in Sources */,
 				6EC6BC7D2A1BD23900021FA7 /* ScannedFiles.xcdatamodeld in Sources */,
 				6EC6BC8B2A1BF82C00021FA7 /* HistoryViewModel.swift in Sources */,
@@ -941,7 +978,6 @@
 				6EC46BF92A1FA37400849B2C /* CameraScanViewController.swift in Sources */,
 				6E0350322A0D75AE00ECAD22 /* Coordinator.swift in Sources */,
 				6E03504F2A0D891E00ECAD22 /* LoadingViewModel.swift in Sources */,
-				6EC6BC8D2A1BFE6800021FA7 /* CardView.swift in Sources */,
 				6EC46C002A20BC2700849B2C /* ScanCardView.swift in Sources */,
 				6E9D75C72A22637800353B7F /* ImageConvertPdfCollectionViewCell.swift in Sources */,
 			);
