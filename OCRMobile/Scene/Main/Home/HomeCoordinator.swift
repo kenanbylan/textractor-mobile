@@ -30,8 +30,4 @@ class HomeCoordinator : Coordinator {
     }
     
     
-    
-    
-    
-    
 }

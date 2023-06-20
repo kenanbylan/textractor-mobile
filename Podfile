@@ -11,7 +11,6 @@ target 'OCRMobile' do
   pod "IQKeyboardManagerSwift"
   pod 'ProgressHUD'
   pod 'lottie-ios'
-  pod 'Google-Mobile-Ads-SDK'
   pod 'PanModal'
 
   

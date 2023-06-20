@@ -20,7 +20,9 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var mergedPdfView: ScanCardView!
     @IBOutlet weak var imageToTextView: ScanCardView!
     
-
+    @IBOutlet weak var sideMenuButton: UIButton!
+    
+    
     //Popular Services
     let services = ["Image to Pdf", "Qr Code", "Merged Pdf", "Image to Text"]
 
