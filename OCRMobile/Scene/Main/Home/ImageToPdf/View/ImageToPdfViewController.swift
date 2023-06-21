@@ -5,14 +5,15 @@
 
 import UIKit
 import PDFKit
+import ProgressHUD
 
 class ImageToPdfViewController: UIViewController, Storyboarded, UINavigationControllerDelegate {
     
     
     
+    
     //MARK: UIElements
     @IBOutlet weak var imageToPdfCollectionView: UICollectionView!
-    
     @IBOutlet weak var addImageImageView: UIImageView!
     
     
@@ -25,7 +26,6 @@ class ImageToPdfViewController: UIViewController, Storyboarded, UINavigationCont
     
     
     //MARK: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCellNibs()
@@ -136,6 +136,7 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
     
     @IBAction func addDocButtonTapped(_ sender: Any) {
         
+        
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
@@ -143,24 +144,34 @@ extension ImageToPdfViewController: UIImagePickerControllerDelegate {
         
         present(imagePicker, animated: true)
         
+        
+        
     }
     
     @IBAction func convertButtonTapped(_ sender: Any) {
         
         
-        if let pdfDocument = viewModel?.convertToPdf() {
+        print("iMAGES : " ,viewModel.getNumberOfImages())
+        
+        if viewModel.getNumberOfImages() <= 0 {
+            ProgressHUD.showFailed("You haven't added the image to convert yet. :/")
+        } else {
             
-            let filePath = ""
-            pdfDocument.write(toFile: filePath)
-            
-            
-            if (viewModel?.getNumberOfImages())! > 0 {
-                // Or present the PDF using UIActivityViewController
-                let activityViewController = UIActivityViewController(activityItems: [pdfDocument.dataRepresentation()], applicationActivities: nil)
-                present(activityViewController, animated: true, completion: nil)
-            } else {
-                //display an alert that no images are selected
+            if let pdfDocument = viewModel?.convertToPdf() {
+                
+                let filePath = ""
+                pdfDocument.write(toFile: filePath)
+                
+                
+                if (viewModel?.getNumberOfImages())! > 0 {
+                    // Or present the PDF using UIActivityViewController
+                    let activityViewController = UIActivityViewController(activityItems: [pdfDocument.dataRepresentation()], applicationActivities: nil)
+                    present(activityViewController, animated: true, completion: nil)
+                } else {
+                    //display an alert that no images are selected
+                }
             }
+            
         }
         
         

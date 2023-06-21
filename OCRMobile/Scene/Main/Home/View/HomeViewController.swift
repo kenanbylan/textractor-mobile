@@ -8,6 +8,7 @@
 import UIKit
 import VisionKit
 
+
 class HomeViewController: UIViewController, Storyboarded {
     
     let coordinator: HomeCoordinator? = nil
@@ -106,6 +107,9 @@ extension HomeViewController {
     
     @objc func mergedPdfTapped() {
         mergedPdfView.addTapAnimation()
+        let controller =  self.storyboard?.instantiateViewController(withIdentifier: "MergePdfViewController") as! MergePdfViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     @objc func imageToTextTapped() {

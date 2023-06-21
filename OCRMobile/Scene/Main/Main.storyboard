@@ -497,13 +497,22 @@
             </objects>
             <point key="canvasLocation" x="-1015" y="1013"/>
         </scene>
-        <!--View Controller-->
+        <!--Merge Pdf View Controller-->
         <scene sceneID="Fse-T4-gbp">
             <objects>
-                <viewController id="dhi-Jo-cAx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MergePdfViewController" id="dhi-Jo-cAx" customClass="MergePdfViewController" customModule="OCRMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0hu-RS-Ftr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Merge Pdf Pages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-io-8MV">
+                                <rect key="frame" x="131" y="398" width="130" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1vo-FC-bfM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -645,7 +654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rle-4C-h2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437" y="206"/>
+            <point key="canvasLocation" x="1453" y="206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zRC-nW-PGa">
