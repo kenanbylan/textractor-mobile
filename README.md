@@ -22,8 +22,10 @@
 <img height="500" alt="Screenshot 2023-06-27 at 23 59 34" src="https://github.com/kenanbylan/textractor-mobile/assets/76161957/c32fa5ef-fb9a-4206-8bc9-005bb4ee929b">
 <img height="500" alt="Screenshot 2023-06-27 at 23 59 38" src="https://github.com/kenanbylan/textractor-mobile/assets/76161957/77800509-4a2e-4437-9a7e-a607a84f6ccd">
 <img height="500" alt="Screenshot 2023-06-28 at 00 00 03" src="https://github.com/kenanbylan/textractor-mobile/assets/76161957/b67570e2-546f-43f6-9141-75e9f475f5f5">
-<img height="500" alt="Screenshot 2023-06-27 at 23 59 41" src="https://github.com/kenanbylan/textractor-mobile/assets/76161957/bff84fc3-23c3-4ec4-9dcc-3bcd4374c0be">
 
+<!--
+<img height="500" alt="Screenshot 2023-06-27 at 23 59 41" src="https://github.com/kenanbylan/textractor-mobile/assets/76161957/bff84fc3-23c3-4ec4-9dcc-3bcd4374c0be">
+-->
 </p>
 
 ## Features
